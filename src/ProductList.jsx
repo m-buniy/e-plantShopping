@@ -363,11 +363,9 @@ function ProductList() {
                 {category.plants.map((plant, index) => (
                   <div className='product-card' key={index}>
                     <p className='product-title'>{plant.name}</p>
-                    <img src={plant.image} alt='' className='product-image' />
+                    <img className='product-image' src={plant.image} alt={plant.name} />
                     <p className='product-price'>{plant.cost}</p>
-                    <p>
-                      <em>{plant.description}</em>
-                    </p>
+                    <p><em>{plant.description}</em></p>
                     <button
                       className='product-button'
                       onClick={() => handleAddToCart(plant)}
